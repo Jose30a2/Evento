@@ -19,18 +19,18 @@ public class Participante {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
-	private String emal;
+	private String email;
 	
 	@ManyToMany(mappedBy = "participantes")
 	private Set<Atividade> atividades = new HashSet<>();
 
 	public Participante() {}
 
-	public Participante(Integer id, String nome, String emal) {
+	public Participante(Integer id, String nome, String email) {
 		super();
 		this.id = id;
 		this.nome = nome;
-		this.emal = emal;
+		this.email = email;
 	}
 
 	public Integer getId() {
@@ -49,12 +49,12 @@ public class Participante {
 		this.nome = nome;
 	}
 
-	public String getEmal() {
-		return emal;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setEmal(String emal) {
-		this.emal = emal;
+	public void setEmal(String email) {
+		this.email = email;
 	}
 	
 	public Set<Atividade> getAtividades() {
